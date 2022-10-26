@@ -25,7 +25,8 @@ void fir (
 	acc_t acc;
 	int i;
 	acc = 0;
-#pragma HLS ARRAY_PARTITION variable=c type=complete dim=1
+
+#pragma HLS ARRAY_PARTITION dim=1 factor=32 type=cyclic variable=c
 
 	Shift_Accum_Loop:
 	for(i=N-1;i>=0;i--){
@@ -37,8 +38,10 @@ void fir (
 		}
 		else{
 			shift_reg[i] = shift_reg[i-1];
-			acc += shift_reg[i] * c[i];
-#pragma HLS ARRAY_PARTITION variable= shift_reg type=complete dim=1
+			acc += shift_reg[i] * c;
+
+#pragma HLS ARRAY_PARTITION dim=1 factor=32 type=cyclic variable=shift_reg
+
 		}
 	}
 	*y = acc;
