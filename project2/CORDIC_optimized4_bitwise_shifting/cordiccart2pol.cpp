@@ -36,15 +36,15 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 		y_s = 1;
 	}
 
-	ap_fixed_type factor = 1.0;
+	//ap_fixed_type factor = 1.0;
 	int NUM_INTEGRATIONS = 16;
 	for (int j = 0; j < NUM_INTEGRATIONS; j++)
 	{
 
 		if (y1 < 0)
 		{
-			ap_fixed_type x_shift = x0 * factor;
-			ap_fixed_type y_shift = y0 * factor;
+			ap_fixed_type x_shift = x0 >> j;
+			ap_fixed_type y_shift = y0 >> j;
 
 			x1 = x0 - y_shift;
 			y1 = y0 + x_shift;
@@ -53,15 +53,15 @@ void cordiccart2pol(data_t x, data_t y, data_t * r,  data_t * theta)
 		}
 		else
 		{
-			ap_fixed_type x_shift = -x0 * factor;
-			ap_fixed_type y_shift = -y0 * factor;
+			ap_fixed_type x_shift = -x0 >> j;
+			ap_fixed_type y_shift = -y0 >> j;
 
 			x1 = x0 - y_shift;
 			y1 = y0 + x_shift;
 
 			theta_accum +=  (ap_fixed_type)angles[j]; //(COS_SIN_TYPE)angles[j];
 		}
-		factor = (factor >> 1);
+		//factor = (factor >> 1);
 
 		x0 = x1;
 		y0 = y1;
