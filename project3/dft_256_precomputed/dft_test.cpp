@@ -34,7 +34,8 @@ struct Rmse
 
 Rmse rmse_R,  rmse_I;
 
-DTYPE In_R[SIZE], In_I[SIZE];
+//DTYPE In_R[SIZE], In_I[SIZE];
+IN_TYPE In_R[N], In_I[N];
 
 int main()
 {
@@ -44,7 +45,7 @@ int main()
 	FILE * fp = fopen("out.gold.dat","r");
 
 	// getting input data
-	for(int i=0; i<SIZE; i++)
+	for(int i=0; i<N; i++)
 	{
 		In_R[i] = i;
 		In_I[i] = 0.0;
@@ -57,7 +58,7 @@ int main()
 
 
 	// comparing with golden output
-	for(int i=0; i<SIZE; i++)
+	for(int i=0; i<N; i++)
 	{
 		fscanf(fp, "%d %f %f", &index, &gold_R, &gold_I);
 		rmse_R.add_value((float)In_R[i] - gold_R);

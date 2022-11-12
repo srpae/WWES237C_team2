@@ -15,7 +15,7 @@ set_part {xc7z020-clg484-1}
 create_clock -period 10 -name default
 config_interface -m_axi_latency 0
 #source "./hls/solution1/directives.tcl"
-csim_design
+csim_design -clean
 csynth_design
 cosim_design
 export_design -format ip_catalog
