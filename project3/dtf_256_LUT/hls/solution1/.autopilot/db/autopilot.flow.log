@@ -1,0 +1,264 @@
+INFO-FLOW: Workspace C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1 opened at Sun Nov 13 13:31:44 -0800 2022
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 0.72 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.114 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.851 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_latency=0 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+Execute     config_interface -m_axi_latency=0 
+Command   open_solution done; 0.903 sec.
+Execute   set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+Execute     create_platform xc7z020clg400-1 -board  
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.114 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+Execute   source ./hls/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./hls/solution1/directives.tcl
+Execute     set_directive_interface -mode s_axilite dft 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite dft 
+Execute     set_directive_interface -mode s_axilite dft real_sample 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite dft real_sample 
+Execute     set_directive_interface -mode s_axilite dft imag_sample 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite dft imag_sample 
+Execute     set_directive_top -name dft dft 
+INFO: [HLS 200-1510] Running: set_directive_top -name dft dft 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 830.387 MB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling dft.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang dft.cpp -foptimization-record-file=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.cpp.clang.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.cpp.clang.err.log 
+Command       ap_eval done; 0.503 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.5 seconds per iteration
+Execute       set_directive_top dft -name=dft 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/clang.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.202 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.315 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/all.directive.json -fix-errors C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.148 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 0.128 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 0.166 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 0.334 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.clang.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.162 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.029 seconds; current allocated memory: 1.109 GB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.g.bc"  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dft.g.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+Command         ap_eval done; 0.268 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.273 sec.
+Execute       run_link_or_opt -opt -out C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -args C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+Command         ap_eval done; 0.516 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.526 sec.
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -args C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 2.133 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.137 sec.
+Execute       run_link_or_opt -opt -out C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dft -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dft -reflow-float-conversion -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 0.671 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.678 sec.
+Execute       run_link_or_opt -out C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dft 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dft -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_compile -instruction_warning_threshold 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_array_partition -throughput_driven 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+Execute       get_clock_period -ns -default 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=dft -mllvm -hls-db-dir -mllvm C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 142.519 sec.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_32_3' (dft.cpp:32:19) in function 'dft' completely with a factor of 256 (dft.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_12_1' (dft.cpp:12:19) in function 'dft' completely with a factor of 256 (dft.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_19_2' (dft.cpp:19:20) in function 'dft' completely with a factor of 256 (dft.cpp:6:0)
+WARNING: [HLS 214-287] Basic block in function dft has more than 200000 instructions. (dft.cpp:5:16)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 147.411 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 1.109 GB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dft -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.0.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 4.739 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.763 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.1.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 3.282 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.531 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.816 seconds; current allocated memory: 1.109 GB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.g.1.bc to C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.o.1.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+Command         transform done; 12.117 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 3.562 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 14 seconds. CPU system time: 0 seconds. Elapsed time: 15.689 seconds; current allocated memory: 1.306 GB.
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.o.2.bc -o C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 127.186 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 121 seconds. CPU system time: 0 seconds. Elapsed time: 127.19 seconds; current allocated memory: 1.957 GB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 151.465 sec.
+Command     elaborate done; 300.981 sec.
+Execute     ap_eval exec zip -j C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command     ap_eval done; 1.026 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+Execute       ap_set_top_model dft 
+Execute       get_model_list dft -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model dft 
+Execute       get_model_list dft -filter all-wo-channel 
+INFO-FLOW: Model list for configure: dft
+INFO-FLOW: Configuring Module : dft ...
+Execute       set_default_model dft 
+Execute       apply_spec_resource_limit dft 
+INFO-FLOW: Model list for preprocess: dft
+INFO-FLOW: Preprocessing Module: dft ...
+Execute       set_default_model dft 
+Execute       cdfg_preprocess -model dft 
+Command       cdfg_preprocess done; 1.308 sec.
+Execute       rtl_gen_preprocess dft 
+INFO-FLOW: Model list for synthesis: dft
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dft 
+Execute       schedule -model dft 

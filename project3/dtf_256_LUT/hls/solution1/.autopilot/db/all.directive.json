@@ -1,0 +1,98 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "dft",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/Users\/srpae\/OneDrive\/Documents\/GitHub\/WWES237C_team2\/project3\/dtf_256_LUT\/hls\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "return"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "dft",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/Users\/srpae\/OneDrive\/Documents\/GitHub\/WWES237C_team2\/project3\/dtf_256_LUT\/hls\/solution1\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "real_sample"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "dft",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/Users\/srpae\/OneDrive\/Documents\/GitHub\/WWES237C_team2\/project3\/dtf_256_LUT\/hls\/solution1\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "imag_sample"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "dft",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "C:\/Users\/srpae\/OneDrive\/Documents\/GitHub\/WWES237C_team2\/project3\/dtf_256_LUT\/hls\/solution1\/directives.tcl",
+          "sourceLine": "9",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "dft"
+              }]
+          }
+        },
+        {
+          "functionName": "dft",
+          "label": "",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "C:\/Users\/srpae\/OneDrive\/Documents\/GitHub\/WWES237C_team2\/project3\/dtf_256_LUT\/hls\/solution1\/csynth.tcl",
+          "sourceLine": "18",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "dft"
+              }]
+          }
+        }
+      ]
+    }]}

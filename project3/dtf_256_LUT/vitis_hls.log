@@ -1,0 +1,56 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'srpae' on host 'msi' (Windows NT_amd64 version 6.2) on Sun Nov 13 13:31:44 -0800 2022
+INFO: [HLS 200-10] In directory 'C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT'
+Sourcing Tcl script 'C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project hls 
+INFO: [HLS 200-10] Opening project 'C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls'.
+INFO: [HLS 200-1510] Running: set_top dft 
+INFO: [HLS 200-1510] Running: add_files coefficients256.h 
+INFO: [HLS 200-10] Adding design file 'coefficients256.h' to the project
+INFO: [HLS 200-1510] Running: add_files dft.cpp 
+INFO: [HLS 200-10] Adding design file 'dft.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files dft.h 
+INFO: [HLS 200-10] Adding design file 'dft.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dft_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'dft_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb out.gold.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: source ./hls/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite dft 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite dft real_sample 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite dft imag_sample 
+INFO: [HLS 200-1510] Running: set_directive_top -name dft dft 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 830.387 MB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.029 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_32_3' (dft.cpp:32:19) in function 'dft' completely with a factor of 256 (dft.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_12_1' (dft.cpp:12:19) in function 'dft' completely with a factor of 256 (dft.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_19_2' (dft.cpp:19:20) in function 'dft' completely with a factor of 256 (dft.cpp:6:0)
+WARNING: [HLS 214-287] Basic block in function dft has more than 200000 instructions. (dft.cpp:5:16)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 147.411 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.763 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.816 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 14 seconds. CPU system time: 0 seconds. Elapsed time: 15.689 seconds; current allocated memory: 1.306 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 121 seconds. CPU system time: 0 seconds. Elapsed time: 127.19 seconds; current allocated memory: 1.957 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...

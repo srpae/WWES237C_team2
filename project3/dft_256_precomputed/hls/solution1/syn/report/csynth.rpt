@@ -1,0 +1,167 @@
+
+
+================================================================
+== Synthesis Summary Report of 'dft'
+================================================================
++ General Information: 
+    * Date:           Sat Nov 12 22:08:15 2022
+    * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:53:37 MDT 2022)
+    * Project:        hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------+--------+-------+---------+-----------+----------+---------+-------+----------+---------+----------+------------+------------+-----+
+    |                     Modules                     |  Issue |       | Latency |  Latency  | Iteration|         |  Trip |          |         |          |            |            |     |
+    |                     & Loops                     |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|  BRAM   |    DSP   |     FF     |     LUT    | URAM|
+    +-------------------------------------------------+--------+-------+---------+-----------+----------+---------+-------+----------+---------+----------+------------+------------+-----+
+    |+ dft                                            |  Timing|  -0.66|   524625|  5.246e+06|         -|   524626|      -|        no|  20 (7%)|  68 (30%)|  10246 (9%)|  9821 (18%)|    -|
+    | + dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2  |  Timing|  -0.66|   524364|  5.244e+06|         -|   524364|      -|        no|   8 (2%)|  68 (30%)|  10023 (9%)|  9405 (17%)|    -|
+    |  o VITIS_LOOP_21_1_VITIS_LOOP_27_2              |      II|   7.30|   524362|  5.244e+06|        83|        8|  65536|       yes|        -|         -|           -|           -|    -|
+    |   + sin_or_cos_double_s                         |      II|   0.22|       32|    320.000|         -|        1|      -|       yes|   8 (2%)|  54 (24%)|   7120 (6%)|  6830 (12%)|    -|
+    | + dft_Pipeline_VITIS_LOOP_39_3                  |       -|   0.79|      258|  2.580e+03|         -|      258|      -|        no|        -|         -|    21 (~0%)|    63 (~0%)|    -|
+    |  o VITIS_LOOP_39_3                              |       -|   7.30|      256|  2.560e+03|         2|        1|    256|       yes|        -|         -|           -|           -|    -|
+    +-------------------------------------------------+--------+-------+---------+-----------+----------+---------+-------+----------+---------+----------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 13            | 2048   | 0        | BRAM=8            |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+----------+
+| Argument    | Direction | Datatype |
++-------------+-----------+----------+
+| sample_real | inout     | double*  |
+| sample_imag | inout     | double*  |
++-------------+-----------+----------+
+
+* SW-to-HW Mapping
++-------------+---------------+---------+-----------------------------------------+
+| Argument    | HW Interface  | HW Type | HW Info                                 |
++-------------+---------------+---------+-----------------------------------------+
+| sample_real | s_axi_control | memory  | name=sample_real offset=2048 range=2048 |
+| sample_imag | s_axi_control | memory  | name=sample_imag offset=4096 range=2048 |
++-------------+---------------+---------+-----------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                            | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++-------------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + dft                                           | 68  |        |             |      |         |         |
+|  + dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2 | 68  |        |             |      |         |         |
+|    add_ln21_fu_224_p2                           | -   |        | add_ln21    | add  | fabric  | 0       |
+|    add_ln21_1_fu_242_p2                         | -   |        | add_ln21_1  | add  | fabric  | 0       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U32            | 11  |        | w_mid2      | dmul | maxdsp  | 6       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U32            | 11  |        | x_assign    | dmul | maxdsp  | 6       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U32            | 11  |        | mul         | dmul | maxdsp  | 6       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U32            | 11  |        | mul1        | dmul | maxdsp  | 6       |
+|    dadddsub_64ns_64ns_64_7_full_dsp_1_U31       | 3   |        | sub         | dsub | fulldsp | 6       |
+|    dadddsub_64ns_64ns_64_7_full_dsp_1_U31       | 3   |        | add         | dsub | fulldsp | 6       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U32            | 11  |        | mul2        | dmul | maxdsp  | 6       |
+|    dmul_64ns_64ns_64_7_max_dsp_1_U32            | 11  |        | mul3        | dmul | maxdsp  | 6       |
+|    dadddsub_64ns_64ns_64_7_full_dsp_1_U31       | 3   |        | add1        | dsub | fulldsp | 6       |
+|    dadddsub_64ns_64ns_64_7_full_dsp_1_U31       | 3   |        | add2        | dsub | fulldsp | 6       |
+|    add_ln27_fu_277_p2                           | -   |        | add_ln27    | add  | fabric  | 0       |
+|   + sin_or_cos_double_s                         | 54  |        |             |      |         |         |
+|     Ex_V_fu_515_p2                              | -   |        | Ex_V        | add  | fabric  | 0       |
+|     add_ln214_fu_340_p2                         | -   |        | add_ln214   | add  | fabric  | 0       |
+|     mul_170s_53ns_170_5_1_U1                    | 18  |        | ret_V_5     | mul  | auto    | 4       |
+|     Mx_bits_V_1_fu_451_p2                       | -   |        | Mx_bits_V_1 | sub  | fabric  | 0       |
+|     Ex_V_3_fu_554_p2                            | -   |        | Ex_V_3      | sub  | fabric  | 0       |
+|     sub_ln1512_fu_719_p2                        | -   |        | sub_ln1512  | sub  | fabric  | 0       |
+|     mul_49ns_49ns_98_5_1_U5                     | 4   |        | r_V_4       | mul  | auto    | 4       |
+|     mul_49ns_49ns_98_5_1_U6                     | 4   |        | r_V_5       | mul  | auto    | 4       |
+|     mul_49ns_49ns_98_5_1_U7                     | 4   |        | r_V_7       | mul  | auto    | 4       |
+|     mul_56ns_52s_108_5_1_U8                     | 5   |        | r_V_9       | mul  | auto    | 4       |
+|     mul_49ns_44s_93_5_1_U9                      | 4   |        | r_V_10      | mul  | auto    | 4       |
+|     mul_42ns_33ns_75_2_1_U10                    | 4   |        | r_V_11      | mul  | auto    | 1       |
+|     mul_35ns_25ns_60_2_1_U11                    | 2   |        | r_V_12      | mul  | auto    | 1       |
+|     mul_64s_63ns_126_5_1_U12                    | 9   |        | r_V_14      | mul  | auto    | 4       |
+|     add_ln451_fu_1169_p2                        | -   |        | add_ln451   | add  | fabric  | 0       |
+|     add_ln451_1_fu_1190_p2                      | -   |        | add_ln451_1 | add  | fabric  | 0       |
+|     add_ln451_2_fu_1245_p2                      | -   |        | add_ln451_2 | add  | fabric  | 0       |
+|     add_ln461_fu_1295_p2                        | -   |        | add_ln461   | add  | fabric  | 0       |
+|     newexp_fu_1305_p2                           | -   |        | newexp      | sub  | fabric  | 0       |
+|  + dft_Pipeline_VITIS_LOOP_39_3                 | 0   |        |             |      |         |         |
+|    add_ln39_fu_118_p2                           | -   |        | add_ln39    | add  | fabric  | 0       |
++-------------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+| Name                                            | BRAM | URAM | Pragma | Variable                         | Storage | Impl   | Latency |
++-------------------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+| + dft                                           | 20   | 0    |        |                                  |         |        |         |
+|   temp_real_U                                   | 4    | -    |        | temp_real                        | ram_1p  | auto   | 1       |
+|   temp_imag_U                                   | 4    | -    |        | temp_imag                        | ram_1p  | auto   | 1       |
+|  + dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2 | 8    | 0    |        |                                  |         |        |         |
+|   + sin_or_cos_double_s                         | 8    | 0    |        |                                  |         |        |         |
+|     ref_4oPi_table_256_V_U                      | 8    | -    |        | ref_4oPi_table_256_V             | rom_1p  | auto   | 1       |
+|     fourth_order_double_sin_cos_K0_V_U          | -    | -    | pragma | fourth_order_double_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|     fourth_order_double_sin_cos_K1_V_U          | -    | -    | pragma | fourth_order_double_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|     fourth_order_double_sin_cos_K2_V_U          | -    | -    | pragma | fourth_order_double_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|     fourth_order_double_sin_cos_K3_V_U          | -    | -    | pragma | fourth_order_double_sin_cos_K3_V | rom_1p  | lutram | 1       |
+|     fourth_order_double_sin_cos_K4_V_U          | -    | -    | pragma | fourth_order_double_sin_cos_K4_V | rom_1p  | lutram | 1       |
++-------------------------------------------------+------+------+--------+----------------------------------+---------+--------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------+----------------------------------------------------+
+| Type      | Options                    | Location                                           |
++-----------+----------------------------+----------------------------------------------------+
+| interface | s_axilite port=return      | hls/solution1/directives.tcl:6 in dft, return      |
+| interface | s_axilite port=sample_imag | hls/solution1/directives.tcl:8 in dft, sample_imag |
+| interface | s_axilite port=sample_real | hls/solution1/directives.tcl:7 in dft, sample_real |
++-----------+----------------------------+----------------------------------------------------+
+
+

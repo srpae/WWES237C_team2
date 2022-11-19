@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="dft.cpp" line="33" pragmaType="unroll" parentfunction="dft" factor="-1" skip_exit_check="0"/>
+<pragma file="dft.cpp" line="13" pragmaType="unroll" parentfunction="dft" factor="-1" skip_exit_check="0"/>
+<pragma file="dft.cpp" line="20" pragmaType="unroll" parentfunction="dft" factor="-1" skip_exit_check="0"/>
+<pragma file="dft.cpp" line="6" pragmaType="interface" parentfunction="dft" mode="s_axilite" port="" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="dft.cpp" line="7" pragmaType="interface" parentfunction="dft" mode="s_axilite" port="real_sample" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="dft.cpp" line="8" pragmaType="interface" parentfunction="dft" mode="s_axilite" port="imag_sample" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

@@ -1,0 +1,39 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/csynth.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dft" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=real_sample" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/directives.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=imag_sample" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/srpae/OneDrive/Documents/GitHub/WWES237C_team2/project3/dtf_256_LUT/hls/solution1/directives.tcl:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=dft" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dft.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dft.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="dft.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="dft" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="dft.cpp:6:0" msg_body="Unrolling loop 'VITIS_LOOP_32_3' (dft.cpp:32:19) in function 'dft' completely with a factor of 256">
+        <args Factor="256" LoopLoc="dft.cpp:32:19" LoopName="VITIS_LOOP_32_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="dft.cpp:6:0" msg_body="Unrolling loop 'VITIS_LOOP_12_1' (dft.cpp:12:19) in function 'dft' completely with a factor of 256">
+        <args Factor="256" LoopLoc="dft.cpp:12:19" LoopName="VITIS_LOOP_12_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="dft.cpp:6:0" msg_body="Unrolling loop 'VITIS_LOOP_19_2' (dft.cpp:19:20) in function 'dft' completely with a factor of 256">
+        <args Factor="256" LoopLoc="dft.cpp:19:20" LoopName="VITIS_LOOP_19_2"/>
+    </msg>
+    <msg msg_groups="QOR_METRICS" msg_id="214-287" msg_severity="WARNING" msg_loc="dft.cpp:5:16" msg_body="Basic block in function dft has more than 200000 instructions.">
+        <args FunctionName="dft" maxInstrCount="200000"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
