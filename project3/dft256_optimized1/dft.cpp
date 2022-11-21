@@ -15,8 +15,6 @@ void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
 		temp_real[i] = 0;
 		temp_imag[i] = 0;
 
-		DTYPE w = (2.0*3.141592653589 / SIZE) * (DTYPE)i;
-
 		for(int j = 0; j < SIZE; j++)
 		{
 #pragma HLS PIPELINE off
