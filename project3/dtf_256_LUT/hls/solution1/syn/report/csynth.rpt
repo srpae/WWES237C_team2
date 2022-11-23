@@ -1,0 +1,133 @@
+
+
+================================================================
+== Synthesis Summary Report of 'dft'
+================================================================
++ General Information: 
+    * Date:           Sat Nov 12 22:03:27 2022
+    * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:53:37 MDT 2022)
+    * Project:        hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+--------+-----------+-----------+-----+
+    |                     Modules                     | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |         |        |           |           |     |
+    |                     & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|  BRAM   |   DSP  |     FF    |    LUT    | URAM|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+--------+-----------+-----------+-----+
+    |+ dft                                            |     -|  0.04|   393493|  3.935e+06|         -|   393494|      -|        no|   8 (2%)|  5 (2%)|  1425 (1%)|  1724 (3%)|    -|
+    | + dft_Pipeline_VITIS_LOOP_12_1_VITIS_LOOP_18_2  |     -|  0.04|   393232|  3.932e+06|         -|   393232|      -|        no|  2 (~0%)|  5 (2%)|  1202 (1%)|  1308 (2%)|    -|
+    |  o VITIS_LOOP_12_1_VITIS_LOOP_18_2              |    II|  7.30|   393230|  3.932e+06|        21|        6|  65536|       yes|        -|       -|          -|          -|    -|
+    | + dft_Pipeline_VITIS_LOOP_30_3                  |     -|  0.79|      258|  2.580e+03|         -|      258|      -|        no|        -|       -|   21 (~0%)|   63 (~0%)|    -|
+    |  o VITIS_LOOP_30_3                              |     -|  7.30|      256|  2.560e+03|         2|        1|    256|       yes|        -|       -|          -|          -|    -|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 12            | 1024   | 0        | BRAM=4            |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+----------+
+| Argument    | Direction | Datatype |
++-------------+-----------+----------+
+| real_sample | inout     | float*   |
+| imag_sample | inout     | float*   |
++-------------+-----------+----------+
+
+* SW-to-HW Mapping
++-------------+---------------+---------+-----------------------------------------+
+| Argument    | HW Interface  | HW Type | HW Info                                 |
++-------------+---------------+---------+-----------------------------------------+
+| real_sample | s_axi_control | memory  | name=real_sample offset=1024 range=1024 |
+| imag_sample | s_axi_control | memory  | name=imag_sample offset=2048 range=1024 |
++-------------+---------------+---------+-----------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+------------+------+---------+---------+
+| Name                                            | DSP | Pragma | Variable   | Op   | Impl    | Latency |
++-------------------------------------------------+-----+--------+------------+------+---------+---------+
+| + dft                                           | 5   |        |            |      |         |         |
+|  + dft_Pipeline_VITIS_LOOP_12_1_VITIS_LOOP_18_2 | 5   |        |            |      |         |         |
+|    add_ln12_fu_214_p2                           | -   |        | add_ln12   | add  | fabric  | 0       |
+|    add_ln12_1_fu_240_p2                         | -   |        | add_ln12_1 | add  | fabric  | 0       |
+|    mul_8s_8s_8_1_1_U3                           | -   |        | mul_ln22   | mul  | auto    | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U2             | 3   |        | mul        | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U2             | 3   |        | mul1       | fmul | maxdsp  | 3       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U1        | 2   |        | sub        | fsub | fulldsp | 4       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U1        | 2   |        | add        | fsub | fulldsp | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U2             | 3   |        | mul2       | fmul | maxdsp  | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U2             | 3   |        | mul3       | fmul | maxdsp  | 3       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U1        | 2   |        | add1       | fsub | fulldsp | 4       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U1        | 2   |        | add2       | fsub | fulldsp | 4       |
+|    add_ln18_fu_297_p2                           | -   |        | add_ln18   | add  | fabric  | 0       |
+|  + dft_Pipeline_VITIS_LOOP_30_3                 | 0   |        |            |      |         |         |
+|    add_ln30_fu_118_p2                           | -   |        | add_ln30   | add  | fabric  | 0       |
++-------------------------------------------------+-----+--------+------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------------------------+------+------+--------+------------------------+---------+------+---------+
+| Name                                            | BRAM | URAM | Pragma | Variable               | Storage | Impl | Latency |
++-------------------------------------------------+------+------+--------+------------------------+---------+------+---------+
+| + dft                                           | 8    | 0    |        |                        |         |      |         |
+|   temp_real_U                                   | 2    | -    |        | temp_real              | ram_1p  | auto | 1       |
+|   temp_imag_U                                   | 2    | -    |        | temp_imag              | ram_1p  | auto | 1       |
+|  + dft_Pipeline_VITIS_LOOP_12_1_VITIS_LOOP_18_2 | 2    | 0    |        |                        |         |      |         |
+|    cos_coefficients_table_U                     | 1    | -    |        | cos_coefficients_table | rom_1p  | auto | 1       |
+|    sin_coefficients_table_U                     | 1    | -    |        | sin_coefficients_table | rom_1p  | auto | 1       |
++-------------------------------------------------+------+------+--------+------------------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------+----------------------------------------------------+
+| Type      | Options                    | Location                                           |
++-----------+----------------------------+----------------------------------------------------+
+| interface | s_axilite port=imag_sample | hls/solution1/directives.tcl:8 in dft, imag_sample |
+| interface | s_axilite port=real_sample | hls/solution1/directives.tcl:7 in dft, real_sample |
+| interface | s_axilite port=return      | hls/solution1/directives.tcl:6 in dft, return      |
++-----------+----------------------------+----------------------------------------------------+
+
+

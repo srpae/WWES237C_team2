@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="hls" solutionName="solution1" date="2022-11-12T22:08:15.469-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_27_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'dadd' operation ('add2', dft.cpp:35) and 'select' operation ('select_ln21_2', dft.cpp:21).&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="hls" solutionName="solution1" date="2022-11-12T22:08:11.555-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_27_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'dadd' operation ('add2', dft.cpp:35) and 'select' operation ('select_ln21_2', dft.cpp:21).&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="hls" solutionName="solution1" date="2022-11-12T22:08:11.515-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_27_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'dadd' operation ('add2', dft.cpp:35) and 'select' operation ('select_ln21_2', dft.cpp:21).&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="hls" solutionName="solution1" date="2022-11-12T22:08:11.477-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_27_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'dadd' operation ('add2', dft.cpp:35) and 'select' operation ('select_ln21_2', dft.cpp:21).&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="hls" solutionName="solution1" date="2022-11-12T22:08:11.445-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_27_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_27_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'dadd' operation ('add2', dft.cpp:35) and 'select' operation ('select_ln21_2', dft.cpp:21).&#xD;&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html" projectName="hls" solutionName="solution1" date="2022-11-12T22:08:11.413-0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="hls" solutionName="solution1" date="2022-11-12T22:08:10.271-0800" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/include/header_files\ap_fixed_ref.h:594: variable-indexed range selection may cause suboptimal QoR." projectName="hls" solutionName="solution1" date="2022-11-12T22:08:08.331-0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (r:/builds/2022.1.2/rdi_builds/continuous/2022_08_05_3605665/src/shared/hls/clib/include/header_files\ap_int_base.h:552:88)" projectName="hls" solutionName="solution1" date="2022-11-12T22:08:07.169-0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
