@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="dft.h" path="C:\Users\srpae\OneDrive\Documents\GitHub\WWES237C_team2\project3\dft_256_precomputed\dft.h"/>
+    <originFiles name="dft.cpp" path="C:\Users\srpae\OneDrive\Documents\GitHub\WWES237C_team2\project3\dft_256_precomputed\dft.cpp"/>
+    <originFiles name="coefficients256.h" path="C:\Users\srpae\OneDrive\Documents\GitHub\WWES237C_team2\project3\dft_256_precomputed\coefficients256.h"/>
+  </source>
+  <testbench>
+    <originFiles name="out.gold.dat" path="C:\Users\srpae\OneDrive\Documents\GitHub\WWES237C_team2\project3\dft_256_precomputed\out.gold.dat"/>
+    <originFiles name="dft_test.cpp" path="C:\Users\srpae\OneDrive\Documents\GitHub\WWES237C_team2\project3\dft_256_precomputed\dft_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
